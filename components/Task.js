@@ -1,15 +1,18 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from "react-native";
 
+
 const Task = (props) => {
    return (
    <View style={styles.item}>
    <View style={styles.itemLeft}>
-    <View style={styles.square}></View>
+   
 
-    <Text style={styles.itemLeft}>{props.text}</Text>
+    <Text style={styles.itemLeft}>Expense Tracker {"\n"}Application</Text>
+    
    </View>
-   <View style={styles.circular}></View>                 
+   <Text style={styles.itemBottom}>Progress</Text>
+   <View style={styles.progressBar}></View>                 
     </View>
 
    )
@@ -17,19 +20,24 @@ const Task = (props) => {
 
 const styles = StyleSheet.create({
     item: {
-        backgroundColor: '#FFF',
-        padding: 15,
-        borderRadius: 10,
-        flexDirection: 'row',
+        backgroundColor: `#483d8b`,
+        height: 250,
+        width: 300,
+        borderRadius: 20,
         alignItems: 'center',
-        justifyContent: 'space-between',
         marginBottom: 20,
+
+        
 
     },
     itemLeft: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        marginTop: 15,
         flexWrap: 'wrap',
+        color: 'white',
+        fontSize: 20,
+        fontWeight: 'bold',
+        paddingRight: 40,
+        
 
     },
     square:{
@@ -42,17 +50,16 @@ const styles = StyleSheet.create({
     },
     itemText:{
         maxWidth: '80%',
+        },
+    itemBottom:{
+        color: '#a9a9a9',
+        paddingRight: 179,
+        marginTop: 30,
         
 
-    },
-    circular: {
-        width: 12,
-        height: 12,
-        borderColor: '#558CF6',
-        borderWidth: 2,
-        borderRadius: 5,
-    },
 
+    }
+ 
 
 });
 
